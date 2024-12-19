@@ -84,7 +84,13 @@ const fs = require("fs"); // file system
 // Using promises with `fs.promises`
 const fsPromises = fs.promises;
 
-// fsPromises.mkdir(...);
+// fsPromises.mkdir("New folder!",(err)=>{
+//     if(err) throw err
+//     else fsPromises.appendFile("text.txt","hello world!!",(err)=>{
+//         if(err) throw err
+//         else console.log("new file created!")
+//     })
+// });
 // fsPromises.writeFile(...);
 
 // Local modules
