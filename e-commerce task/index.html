@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>My Store</title>
+  </head>
+  <body>
+    <header>
+      <h1>My Store</h1>
+    </header>
+
+    <div class="container">
+      <div class="filters">
+        <input type="text" placeholder="Search for products..." id="search" />
+        <select id="category">
+          <option value="">All Categories</option>
+          <option value="men's clothing">Men's Clothing</option>
+          <option value="women's clothing">Women's Clothing</option>
+          <option value="electronics">Electronics</option>
+          <option value="jewelery">Jewelery</option>
+        </select>
+        <input type="number" placeholder="Min Price" id="min-price" />
+        <input type="number" placeholder="Max Price" id="max-price" />
+        <select id="sort">
+          <option value="default">Default</option>
+          <option value="asc">Price Low to High</option>
+          <option value="desc">Price High to Low</option>
+        </select>
+        <button id="apply-filters">Apply Filters</button>
+      </div>
+      <div class="cart">
+        <h3>Shopping Cart</h3>
+        <ul id="cart-items">
+          <!-- Dynamically add items here -->
+        </ul>
+        <p>Total Quantity: <span id="total-quantity">0</span></p>
+        <p>Total Price: $<span id="total-price">0.00</span></p>
+      </div>
+      <div class="products" id="products-container">
+        <!-- Products will be dynamically added here -->
+      </div>
+      <div class="pagination" id="pagination">
+        <!-- Pagination buttons will be dynamically added here -->
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
