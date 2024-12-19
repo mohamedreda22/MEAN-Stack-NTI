@@ -1,6 +1,6 @@
 const express =require("express");
-const multer = require("multer");
 const router = express.Router();
+const upload = require('./utilis/multerConfig');
 const ProductsArray =[    
     {id:1,name:"Phone",description:"description of the Phone",imgURL:"img1.png"},
     {id:2,name:"card",description:"description of the card",imgURL:"img2.png"},
@@ -37,13 +37,6 @@ router.delete('/:id',(req,res)=>{
     res.status(204).json()
 })
 
-const storage = multer.diskStorage({destination: (req,file,cb)=>{
-    cb(null,'images');
-},filename: (req,file,cb)=>{
-    cb(null,Date.now() + "_" + file.originalname)
-}});
-const upload =multer({storage});
-
 router.post('/',upload.single('productImage'),(req,res)=>{
     try{
         const {id, name, description}=req.body;
@@ -54,5 +47,6 @@ router.post('/',upload.single('productImage'),(req,res)=>{
         res.status(500).json('error: ',{error: error.message})
     }
 })
+
 
 module.exports = router;
