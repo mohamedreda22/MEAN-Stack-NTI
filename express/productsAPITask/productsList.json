@@ -1,0 +1,140 @@
+[
+  {
+    "id": 1,
+    "name": "Smartphone X",
+    "description": "A high-performance smartphone with a stunning display and advanced camera features.",
+    "imgURL": "smartphone_x.png"
+  },
+  {
+    "id": 2,
+    "name": "Gaming Laptop Pro",
+    "description": "A powerful gaming laptop with top-notch graphics and a fast processor for seamless gaming.",
+    "imgURL": "gaming_laptop_pro.png"
+  },
+  {
+    "id": 3,
+    "name": "Wireless Earbuds",
+    "description": "Compact and comfortable earbuds with superior sound quality and noise cancellation.",
+    "imgURL": "wireless_earbuds.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Smartwatch",
+    "description": "A sleek smartwatch with fitness tracking, notifications, and customizable watch faces.",
+    "imgURL": "smartwatch.png"
+  },
+  {
+    "id": 5,
+    "name": "Bluetooth Speaker",
+    "description": "A portable Bluetooth speaker with deep bass and long battery life, perfect for outdoor use.",
+    "imgURL": "bluetooth_speaker.jpg"
+  },
+  {
+    "id": 6,
+    "name": "4K TV Ultra",
+    "description": "A stunning 4K Ultra HD television with vibrant colors and exceptional clarity.",
+    "imgURL": "4k_tv_ultra.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Tablet Pro 11",
+    "description": "A lightweight tablet with a powerful processor, perfect for work and entertainment.",
+    "imgURL": "tablet_pro_11.png"
+  },
+  {
+    "id": 8,
+    "name": "DSLR Camera",
+    "description": "A professional-grade DSLR camera for capturing breathtaking photos and videos.",
+    "imgURL": "dslr_camera.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Gaming Headset",
+    "description": "High-quality gaming headset with surround sound and a noise-canceling microphone.",
+    "imgURL": "gaming_headset.png"
+  },
+  {
+    "id": 10,
+    "name": "Fitness Tracker",
+    "description": "A compact fitness tracker with heart rate monitoring and activity tracking.",
+    "imgURL": "fitness_tracker.png"
+  },
+  {
+    "id": 11,
+    "name": "Portable Charger111111111",
+    "description": "A high-capacity portable charger to keep your devices powered on the go.",
+    "imgURL": "portable_charger.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Mechanical Keyboard",
+    "description": "A durable mechanical keyboard with customizable RGB lighting and tactile switches.",
+    "imgURL": "mechanical_keyboard.png"
+  },
+  {
+    "id": 13,
+    "name": "Drone Explorer",
+    "description": "A compact and easy-to-use drone with HD camera and real-time video streaming.",
+    "imgURL": "drone_explorer.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Electric Scooter",
+    "description": "A sleek and efficient electric scooter for urban commuting.",
+    "imgURL": "electric_scooter.png"
+  },
+  {
+    "id": 15,
+    "name": "Noise-Canceling Headphones",
+    "description": "Premium headphones with active noise cancellation for immersive audio experiences.",
+    "imgURL": "noise_canceling_headphones.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Smart Home Hub",
+    "description": "A central hub to control all your smart home devices seamlessly.",
+    "imgURL": "smart_home_hub.png"
+  },
+  {
+    "id": 17,
+    "name": "Gaming Mouse",
+    "description": "A precision gaming mouse with customizable buttons and ergonomic design.",
+    "imgURL": "gaming_mouse.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Air Purifier",
+    "description": "A compact air purifier that removes allergens and pollutants for cleaner air.",
+    "imgURL": "air_purifier.png"
+  },
+  {
+    "id": 19,
+    "name": "VR Headset",
+    "description": "An immersive VR headset with stunning visuals and intuitive controls.",
+    "imgURL": "vr_headset.png"
+  },
+  {
+    "id": 20,
+    "name": "Smart Scale",
+    "description": "A smart scale that measures weight, body fat, and other health metrics for a complete picture of your health.",
+    "imgURL": "smart_scale.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Portable Charger111111111",
+    "description": "A high-capacity portable charger to keep your devices powered on the go.",
+    "imgURL": ""
+  },
+  {
+    "id": 22,
+    "name": "Portable Charger111111111",
+    "description": "A high-capacity portable charger to keep your devices powered on the go.",
+    "imgURL": ""
+  },
+  {
+    "id": 23,
+    "name": "Portable Charger222222222",
+    "description": "A high-capacity portable charger to keep your devices powered on the go",
+    "imgURL": "images\\1734815806030_My LOGO.jpg"
+  }
+]
