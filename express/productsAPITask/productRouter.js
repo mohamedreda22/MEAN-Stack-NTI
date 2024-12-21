@@ -31,21 +31,49 @@ const writeProductsToFile = (products) => {
 };
 
 // GET all products or filter by id or name
+// router.get("/", async (req, res) => {
+//   try {
+//     const productsList = await readProductsFromFile();
+//     if (req.query.id) {
+//       const product = productsList.find((p) => p.id == req.query.id);
+//       if (!product) {
+//         return res.status(404).json({ error: "Product not found" });
+//       }
+//       return res.json(product);
+//     } else if (req.query.name) {
+//       const product = productsList.find((p) => p.name == req.query.name);
+//       return res.json(product || { error: "Product not found" });
+//     } else {
+//       res.status(200).json(productsList);
+//     }
+//   } catch (error) {
+//     res.status(500).json({ error: error.message });
+//   }
+// });
+
+// GET all products or filter by id or name
 router.get("/", async (req, res) => {
   try {
     const productsList = await readProductsFromFile();
-    if (req.query.id) {
-      const product = productsList.find((p) => p.id == req.query.id);
-      if (!product) {
-        return res.status(404).json({ error: "Product not found" });
-      }
-      return res.json(product);
-    } else if (req.query.name) {
-      const product = productsList.find((p) => p.name == req.query.name);
-      return res.json(product || { error: "Product not found" });
-    } else {
-      res.status(200).json(productsList);
+    const { id, name } = req.query;
+
+    let results = productsList;
+
+    if (id) {
+      results = results.filter((p) => p.id == id);
     }
+
+    if (name) {
+      results = results.filter((p) =>
+        p.name.toLowerCase().includes(name.toLowerCase())
+      );
+    }
+
+    if (results.length === 0) {
+      return res.status(404).json({ error: "Product not found" });
+    }
+
+    res.status(200).json(results);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
