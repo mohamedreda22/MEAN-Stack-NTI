@@ -3,67 +3,73 @@
     "id": 1,
     "name": "Smartphone X",
     "description": "A high-performance smartphone with a stunning display and advanced camera features.",
-    "imgURL": "smartphone_x.png"
+    "imgURL": "smartphone_x.png",
+    "price": 999.99,
+    "category": "Electronics"
   },
   {
     "id": 2,
     "name": "Gaming Laptop Pro",
     "description": "A powerful gaming laptop with top-notch graphics and a fast processor for seamless gaming.",
-    "imgURL": "gaming_laptop_pro.png"
+    "imgURL": "gaming_laptop_pro.png",
+    "price": 1499.99,
+    "category": "Computers"
   },
   {
     "id": 3,
     "name": "Wireless Earbuds",
     "description": "Compact and comfortable earbuds with superior sound quality and noise cancellation.",
-    "imgURL": "wireless_earbuds.jpg"
+    "imgURL": "wireless_earbuds.jpg",
+    "price": 199.99,
+    "category": "Audio"
   },
   {
     "id": 4,
     "name": "Smartwatch",
     "description": "A sleek smartwatch with fitness tracking, notifications, and customizable watch faces.",
-    "imgURL": "smartwatch.png"
+    "imgURL": "smartwatch.png",
+    "price": 299.99,
+    "category": "Wearables"
   },
   {
     "id": 5,
     "name": "Bluetooth Speaker",
     "description": "A portable Bluetooth speaker with deep bass and long battery life, perfect for outdoor use.",
-    "imgURL": "bluetooth_speaker.jpg"
+    "imgURL": "bluetooth_speaker.jpg",
+    "price": 129.99,
+    "category": "Audio"
   },
   {
     "id": 6,
     "name": "4K TV Ultra",
     "description": "A stunning 4K Ultra HD television with vibrant colors and exceptional clarity.",
-    "imgURL": "4k_tv_ultra.jpg"
+    "imgURL": "4k_tv_ultra.jpg",
+    "price": 799.99,
+    "category": "Electronics"
   },
   {
     "id": 7,
     "name": "Tablet Pro 11",
     "description": "A lightweight tablet with a powerful processor, perfect for work and entertainment.",
-    "imgURL": "tablet_pro_11.png"
+    "imgURL": "tablet_pro_11.png",
+    "price": 599.99,
+    "category": "Computers"
   },
   {
     "id": 8,
     "name": "DSLR Camera",
     "description": "A professional-grade DSLR camera for capturing breathtaking photos and videos.",
-    "imgURL": "dslr_camera.jpg"
+    "imgURL": "dslr_camera.jpg",
+    "price": 999.99,
+    "category": "Cameras"
   },
   {
     "id": 9,
-    "name": "Gaming Headset",
-    "description": "High-quality gaming headset with surround sound and a noise-canceling microphone.",
-    "imgURL": "gaming_headset.png"
-  },
-  {
-    "id": 10,
     "name": "Fitness Tracker",
-    "description": "A compact fitness tracker with heart rate monitoring and activity tracking.",
-    "imgURL": "fitness_tracker.png"
-  },
-  {
-    "id": 11,
-    "name": "Portable Charger111111111",
-    "description": "A high-capacity portable charger to keep your devices powered on the go.",
-    "imgURL": "portable_charger.jpg"
+    "description": "A sleek fitness tracker with heart rate monitoring, sleep tracking, and workout guidance.",
+    "imgURL": "fitness_tracker.png",
+    "price": 149.99,
+    "category": "Wearables"
   },
   {
     "id": 12,
@@ -135,6 +141,6 @@
     "id": 23,
     "name": "Portable Charger222222222",
     "description": "A high-capacity portable charger to keep your devices powered on the go",
-    "imgURL": "images\\1734815806030_My LOGO.jpg"
+    "imgURL": "uploads\\1734815806030_My LOGO.jpg"
   }
 ]

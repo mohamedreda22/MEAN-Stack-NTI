@@ -46,7 +46,7 @@ const productRouter = require('./productRouter');
 // 
 // use is a middleware that use to tell the server that I will use Json
 app.use(express.json());
-app.use('/uploads',express.static('./images'))
+app.use("/uploads", express.static("./uploads"));
 
 app.use("/about",aboutRouter);
 app.use("/products",productRouter);
