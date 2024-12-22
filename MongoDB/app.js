@@ -65,10 +65,20 @@ app.get('/students', async (req, res) => {
     // const students = await Student.find().sort("-grade");
     // const students = await Student.find().limit(5);
     // const students = await Student.find().skip(5).limit(5);
-    const students = await Student.find().countDocuments();
-
-
+    // const students = await Student.find().countDocuments();
+    // const students = await Student.find().select('name age');
+    // const students = await Student.find().select('name age -_id');
+    // const students = await Student.findById('6767e207bf6f6599bb2c78f7');
+    // const students = await Student.where('grade').gte(85).lte(90);
+    // const students = await Student.aggregate([
+    //     {
+    //         // $group: {_id:null,avgAge:{$avg: '$grade'}}
+    //         $group: {_id:null,sum:{$sum: '$grade'}}
+    //     }
+    // ]);
+    const students = await Student.find()
     res.status(200).json(students);
+    // res.status(200).json({totalGrades:students});
 });
 
 // This is the original code for the get by id (req.params.{id || name})
@@ -84,6 +94,15 @@ app.get('/students', async (req, res) => {
     res.status(200).json(students);
 });
 
+app.put('/students/:id', async (req, res) => {
+    try {
+        const student = await Student.findByIdAndUpdate(req.params.id, req.body, {new: true});
+        res.status(200).json(student);
+    } catch (err) {
+        res.status(404).json({message: err.message});
+    }
+}
+);
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
     });
