@@ -47,7 +47,6 @@ async function fetchAPI() {
   }
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
   fetchAPI();
   updateCart(); // Update cart on page load
@@ -63,7 +62,7 @@ function displayProducts(products) {
     const productElement = document.createElement("div");
     productElement.classList.add("product");
     productElement.innerHTML = `
-      <img src="${product.imgURL}" alt="${product.name}">
+    <img src="http://localhost:5000/${product.imgURL}" alt="${product.name}">
       <div class="product-info">
         <h4>${product.name}</h4>
         <p>Category: <span>${product.category}</span></p>
@@ -91,14 +90,18 @@ function displayProducts(products) {
     productElement.innerHTML = `
     <img src="http://localhost:5000/${product.imgURL}" alt="${product.name}">
       <div class="product-info">
-        <h4>${product.name || "Unnamed Product"}</h4>
-        <p>Description: <span>${
-          product.description || "No description available"
-        }</span></p>
-        <div class="btns">
-          <button onclick="addToCart(${product.id})">Add to Cart</button>
-          <button onclick="ShowDetails(${product.id})">Show details</button>
-        </div>
+      <h4>${product.name || "Unnamed Product"}</h4>
+      <p>Description: <span>${
+        product.description || "No description available"
+      }</span></p>
+      <p>Category: <span style="color: red;">${
+        product.category || "No category"
+      }</span></p>
+      <p>Price: $<span style="color: red;">${product.price || "0.00"}</span></p>
+      <div class="btns">
+        <button onclick="addToCart(${product.id})">Add to Cart</button>
+        <button onclick="ShowDetails(${product.id})">Show details</button>
+      </div>
       </div>
     `;
     productsContainer.appendChild(productElement);
@@ -175,7 +178,7 @@ function ShowDetails(productId) {
   modal.innerHTML = `
     <div class="modal-content">
       <span class="close-button">&times;</span>
-      <img src="${product.imgURL}" alt="${product.name}" style="max-width: 100%; height: auto;">
+      <img src="http://localhost:5000/${product.imgURL}" alt="${product.name}" style="max-width: 100%; height: auto;">
       <h3>${product.name}</h3>
       <p>Category: <span>${product.category}</span></p>
       <p>Price: <span>$${product.price}</span></p>

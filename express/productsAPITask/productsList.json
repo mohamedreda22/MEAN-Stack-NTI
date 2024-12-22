@@ -2,16 +2,16 @@
   {
     "id": 1,
     "name": "Smartphone X",
-    "description": "A high-performance smartphone with a stunning display and advanced camera features.",
-    "imgURL": "smartphone_x.png",
-    "price": 999.99,
-    "category": "Electronics"
+    "imgURL": "uploads\\1734842411988_634d0088267ddb563c103182-simple-mobile-apple-iphone-x-64gb.jpg",
+    "description": "A high-end smartphone with a stunning display, fast processor, and advanced camera features.",
+    "price": 799.99,
+    "category": "Phones"
   },
   {
     "id": 2,
     "name": "Gaming Laptop Pro",
     "description": "A powerful gaming laptop with top-notch graphics and a fast processor for seamless gaming.",
-    "imgURL": "gaming_laptop_pro.png",
+    "imgURL": "uploads\\1734842430689_71kHFb-YzmL._AC_SL1500_.jpg",
     "price": 1499.99,
     "category": "Computers"
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "name": "Wireless Earbuds",
     "description": "Compact and comfortable earbuds with superior sound quality and noise cancellation.",
-    "imgURL": "wireless_earbuds.jpg",
+    "imgURL": "uploads\\1734842476993_shopping.webp",
     "price": 199.99,
     "category": "Audio"
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "name": "Smartwatch",
     "description": "A sleek smartwatch with fitness tracking, notifications, and customizable watch faces.",
-    "imgURL": "smartwatch.png",
+    "imgURL": "uploads\\1734842498328_download.webp",
     "price": 299.99,
     "category": "Wearables"
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "name": "Bluetooth Speaker",
     "description": "A portable Bluetooth speaker with deep bass and long battery life, perfect for outdoor use.",
-    "imgURL": "bluetooth_speaker.jpg",
+    "imgURL": "uploads\\1734842519162_shopping (1).webp",
     "price": 129.99,
     "category": "Audio"
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "name": "4K TV Ultra",
     "description": "A stunning 4K Ultra HD television with vibrant colors and exceptional clarity.",
-    "imgURL": "4k_tv_ultra.jpg",
+    "imgURL": "uploads\\1734842539166_shopping (2).webp",
     "price": 799.99,
     "category": "Electronics"
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "name": "Tablet Pro 11",
     "description": "A lightweight tablet with a powerful processor, perfect for work and entertainment.",
-    "imgURL": "tablet_pro_11.png",
+    "imgURL": "uploads\\1734842560046_shopping (3).webp",
     "price": 599.99,
     "category": "Computers"
   },
@@ -59,7 +59,7 @@
     "id": 8,
     "name": "DSLR Camera",
     "description": "A professional-grade DSLR camera for capturing breathtaking photos and videos.",
-    "imgURL": "dslr_camera.jpg",
+    "imgURL": "uploads\\1734842581631_download (1).webp",
     "price": 999.99,
     "category": "Cameras"
   },
@@ -75,72 +75,72 @@
     "id": 12,
     "name": "Mechanical Keyboard",
     "description": "A durable mechanical keyboard with customizable RGB lighting and tactile switches.",
-    "imgURL": "mechanical_keyboard.png"
+    "imgURL": "mechanical_keyboard.png",
+    "price": 99.99,
+    "category": "Computers"
   },
   {
     "id": 13,
     "name": "Drone Explorer",
     "description": "A compact and easy-to-use drone with HD camera and real-time video streaming.",
-    "imgURL": "drone_explorer.jpg"
+    "imgURL": "drone_explorer.jpg",
+    "price": 299.99,
+    "category": "Electronics"
   },
   {
     "id": 14,
     "name": "Electric Scooter",
     "description": "A sleek and efficient electric scooter for urban commuting.",
-    "imgURL": "electric_scooter.png"
+    "imgURL": "electric_scooter.png",
+    "price": 399.99,
+    "category": "Electronics"
   },
   {
     "id": 15,
     "name": "Noise-Canceling Headphones",
     "description": "Premium headphones with active noise cancellation for immersive audio experiences.",
-    "imgURL": "noise_canceling_headphones.jpg"
+    "imgURL": "noise_canceling_headphones.jpg",
+    "price": 249.99,
+    "category": "Audio"
   },
   {
     "id": 16,
     "name": "Smart Home Hub",
     "description": "A central hub to control all your smart home devices seamlessly.",
-    "imgURL": "smart_home_hub.png"
+    "imgURL": "smart_home_hub.png",
+    "price": 199.99,
+    "category": "Electronics"
   },
   {
     "id": 17,
     "name": "Gaming Mouse",
     "description": "A precision gaming mouse with customizable buttons and ergonomic design.",
-    "imgURL": "gaming_mouse.jpg"
+    "imgURL": "gaming_mouse.jpg",
+    "price": 79.99,
+    "category": "Computers"
   },
   {
     "id": 18,
     "name": "Air Purifier",
     "description": "A compact air purifier that removes allergens and pollutants for cleaner air.",
-    "imgURL": "air_purifier.png"
+    "imgURL": "air_purifier.png",
+    "price": 149.99,
+    "category": "Home"
   },
   {
     "id": 19,
     "name": "VR Headset",
     "description": "An immersive VR headset with stunning visuals and intuitive controls.",
-    "imgURL": "vr_headset.png"
+    "imgURL": "vr_headset.png",
+    "price": 399.99,
+    "category": "Electronics"
   },
   {
     "id": 20,
     "name": "Smart Scale",
     "description": "A smart scale that measures weight, body fat, and other health metrics for a complete picture of your health.",
-    "imgURL": "smart_scale.jpg"
-  },
-  {
-    "id": 21,
-    "name": "Portable Charger111111111",
-    "description": "A high-capacity portable charger to keep your devices powered on the go.",
-    "imgURL": ""
-  },
-  {
-    "id": 22,
-    "name": "Portable Charger111111111",
-    "description": "A high-capacity portable charger to keep your devices powered on the go.",
-    "imgURL": ""
-  },
-  {
-    "id": 23,
-    "name": "Portable Charger222222222",
-    "description": "A high-capacity portable charger to keep your devices powered on the go",
-    "imgURL": "uploads\\1734815806030_My LOGO.jpg"
+    "imgURL": "smart_scale.jpg",
+    "price": 79.99,
+    "category": "Health"
   }
 ]

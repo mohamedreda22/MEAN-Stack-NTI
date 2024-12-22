@@ -147,7 +147,28 @@ router.post("/", upload.single("imgURL"), async (req, res) => {
 // });
 
 // PUT (update) product by id
-router.put("/:id", async (req, res) => {
+// router.put("/:id", async (req, res) => {
+//   try {
+//     const { name, description } = req.body;
+//     const productsList = await readProductsFromFile();
+//     const index = productsList.findIndex((p) => p.id == req.params.id);
+//     if (index === -1) {
+//       return res.status(404).json({ error: "Product not found" });
+//     }
+//     productsList[index] = {
+//       id: parseInt(req.params.id),
+//       name,
+//       description,
+//       imgURL: productsList[index].imgURL,
+//     };
+//     await writeProductsToFile(productsList);
+//     res.status(200).json(productsList[index]);
+//   } catch (error) {
+//     res.status(500).json({ error: error.message });
+//   }
+// });
+
+router.put("/:id", upload.single("imgURL"), async (req, res) => {
   try {
     const { name, description } = req.body;
     const productsList = await readProductsFromFile();
@@ -155,14 +176,15 @@ router.put("/:id", async (req, res) => {
     if (index === -1) {
       return res.status(404).json({ error: "Product not found" });
     }
-    productsList[index] = {
-      id: parseInt(req.params.id),
-      name,
-      description,
-      imgURL: productsList[index].imgURL,
+    const updatedProduct = {
+      ...productsList[index],
+      name: name || productsList[index].name,
+      description: description || productsList[index].description,
+      imgURL: req.file ? req.file.path : productsList[index].imgURL,
     };
+    productsList[index] = updatedProduct;
     await writeProductsToFile(productsList);
-    res.status(200).json(productsList[index]);
+    res.status(200).json(updatedProduct);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
