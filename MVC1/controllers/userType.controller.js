@@ -1,9 +1,18 @@
+const e = require('express');
 const userTypeModel = require('../models/userType.model');
 
 exports.createUserType = async (req, res) => {
     try {
         // const userType = new userTypeModel(req.body);
         // await userType.save();
+        const userTypeID = req.userType.userType;
+        const myUserType = await userTypeModel.findById(userTypeID);
+        if(myUserType.name === 'admin'){
+            const userType = await userTypeModel.create(req.body);
+            res.status(201).send(userType);
+        }else{
+            res.status(401).json({ message: 'Unauthorized' });
+        }
         const userType = await userTypeModel.create(req.body);
         res.status(201).send(userType);
     } catch (error) {
@@ -13,6 +22,14 @@ exports.createUserType = async (req, res) => {
 
 exports.getUserTypes = async (req, res) => {
     try {
+        const userTypeID = req.userType.userType;
+        const myUserType = await userTypeModel.findById(userTypeID);
+        if(myUserType.name === 'admin'){
+            const userType = await userTypeModel.create(req.body);
+            res.status(201).send(userType);
+        }else{
+            res.status(401).json({ message: 'Unauthorized' });
+        }
         const userTypes = await userTypeModel.find();
         res.status(200).send(userTypes);
     } catch (error) {

@@ -1,6 +1,6 @@
 const userModel = require('../models/user.model');
-const bcrypt = require('bcrypt');
-const { hashPassword , comparePassword ,isMatch } = require('../utilis/hasing');
+const { hashPassword  ,isMatch } = require('../utilis/hasing');
+const auth = require('../utilis/auth');
 
 exports.createUser = async (req, res) => {
     try {
@@ -97,7 +97,8 @@ exports.loginUser = async (req, res) => {
         if (!passwordMatch) {
             return res.status(400).json({ message: 'Invalid credentials' });
         }
-        res.status(200).json({ message: 'Login successful' });
+        const token = auth.generateToken(user);
+        res.status(200).json({ message: 'Login successful', token });
     }
     catch (error) {
         res.status(500).json({ message: error.message });
