@@ -15,12 +15,12 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     userType: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'UserType', // name of the collection
+        type: mongoose.Schema.Types.ObjectId, // reference to the userType collection
+        ref: 'usertypes', // name of the collection
         required: true
     }
 }, {
     timestamps: true
 });
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('user', userSchema);

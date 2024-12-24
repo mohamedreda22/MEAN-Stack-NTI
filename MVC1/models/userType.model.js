@@ -13,4 +13,4 @@ const userTypeSchema = new mongoose.Schema({
     timestamps: true
 });
 
-module.exports = mongoose.model('UserType', userTypeSchema);
+module.exports = mongoose.model('userType', userTypeSchema);
