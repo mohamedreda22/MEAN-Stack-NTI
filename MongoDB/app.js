@@ -94,16 +94,27 @@ app.get('/students', async (req, res) => {
     res.status(200).json(students);
 });
 
-app.put('/students/:id', async (req, res) => {
+// app.put('/students/:id', async (req, res) => {
+//     try {
+//         // const student = await Student.findByIdAndUpdate(req.params.id, req.body, {new: true});
+//         const student = await Student.updateOne({grade:100},{name:"Ahmed"});
+//         res.status(200).json(student);
+//     } catch (err) {
+//         res.status(404).json({message: err.message});
+//     }
+// }
+// );
+ app.delete('/students', async (req, res) => {
     try {
-        const student = await Student.findByIdAndUpdate(req.params.id, req.body, {new: true});
+        // const student = await Student.deleteOne({grade:100});
         res.status(200).json(student);
     } catch (err) {
         res.status(404).json({message: err.message});
     }
 }
 );
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
     });
-
+    
