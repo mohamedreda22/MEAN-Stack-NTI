@@ -1,11 +1,11 @@
-<h1>Hello Angular</h1>
+<!-- <h1>Hello Angular</h1> -->
 <!-- Binding -->
 <!-- Interpolation (Oneway binding) -->
-<p>{{name}}</p>
+<!-- <p>{{name}}</p> -->
 
 <!-- Property binding -->
-<p [innerHTML]="name"></p>
-<img [src]="imageURL" alt="">
+<!-- <p [innerHTML]="name"></p> -->
+<!-- <img [src]="imageURL" alt=""> -->
 <!-- <button [disabled]="isDisabled">Click me</button> -->
 
 <!-- Event binding -->
@@ -13,36 +13,54 @@
 <!-- <button (click)="do($event)">Click me!!</button> -->
 
 <!-- Two way binding -->
-<input type="text" [(ngModel)]="name">
-<p>{{name}}</p>
+<!-- <input type="text" [(ngModel)]="name">  --><!--  this is a property binding and event binding -->
+<!-- <p>{{name}}</p> -->
 
 <!-- Directives -->
 <!-- *ngIf -->
-<p *ngIf="show">Show me</p>
+<!-- <p *ngIf="show">Show me</p> -->
 
 <!-- *ngFor -->
-<ul>
-    <!-- <li *ngFor="let item of items">{{item}}</li> -->
-</ul>
+<!-- <ul>
+    <li *ngFor="let item of items">{{item}}</li>
+</ul> -->
 
 <!-- *ngSwitch -->
-<div [ngSwitch]="color">
+<!-- <div [ngSwitch]="color">
     <p *ngSwitchCase="'red'">Red color</p>
     <p *ngSwitchCase="'blue'">Blue color</p>
     <p *ngSwitchDefault>Invalid color</p>
-</div>
+</div> -->
 
-<!-- Style binding -->
+<!-- Style binding ==>
 <p [style.color]="color">Color me</p>
+<p [class.active]="isActive">{{name}}</p>
+<p [style.font-size]="fontSize">Style me</p> -->
 
-<!-- Class binding -->
-<p [class]="color">Class me</p>
+<!-- <p *ngIf="isActive">"IsActive"</p>
+<p *ngIf="!isActive">"IsNotActive"</p>
+<button (click)="isActive=!isActive">Toggle</button> -->
+
+<ul>
+    <!-- <li *ngFor="let name of names">{{name}}</li> -->
+     <!-- <li *ngFor="let name of names; let i=index">
+        <span *ngIf="name !=='Ali'">{{i+1}} - {{name}}</span>
+        </li> -->
+        <!-- <ng-container *ngFor="let name of names; let i=index">  ng-container is used to avoid extra div -->
+            <!-- <li *ngIf="name !=='Ali'">{{i+1}} - {{name}}</li>   -->
+        <!-- </ng-container> -->
+</ul>
+
+<!-- <p *ngIf="x =='Ali'">ISACTIVE</p> -->
+
+<!-- Class binding
+<p [class]="color">Class me</p> -->
 
 <!-- Attribute binding -->
-<p [attr.title]="color">Attribute me</p>
+<!-- <p [attr.title]="color">Attribute me</p> -->
 
 <!-- Template reference variable -->
-<input type="text" #input>
+<!-- <input type="text" #input> -->
 <!-- <button (click)="onClick(input)">Click me</button> -->
 
 <!-- Component Interaction -->
@@ -50,12 +68,12 @@
 <p>{{message}}</p> -->
 
 <!-- Routing -->
-<a routerLink="/second">Second</a>
+<!-- <a routerLink="/second">Second</a>
 <a routerLink="/third">Third</a>
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
 
 <!-- Pipes -->
-<p>{{name | uppercase}}</p>
+<!-- <p>{{name | uppercase}}</p>
 <p>{{name | lowercase}}</p>
 <p>{{name | titlecase}}</p>
 <p>{{name | slice:3:5}}</p>
@@ -64,7 +82,7 @@
 <p>{{5.678 | number:'3.1-2'}}</p>
 <p>{{0.25 | percent}}</p>
 <p>{{0.25 | currency}}</p>
-<p>{{0.25 | currency:'GBP'}}</p>
+<p>{{0.25 | currency:'GBP'}}</p> -->
 <!-- <p>{{date | date:'short'}}</p>
 <p>{{date | date:'shortDate'}}</p>
 <p>{{date | date:'shortTime'}}</p>
@@ -73,8 +91,8 @@ Custom Pipes -->
 <!-- <p>{{name | reverse}}</p> -->
 
 <!-- Services -->
-<p>{{name}}</p>
-<button (click)="onClick()">Click me</button>
+<!-- <p>{{name}}</p>
+<button (click)="onClick()">Click me</button> -->
 
 <!-- HTTP Client -->
 <ul>

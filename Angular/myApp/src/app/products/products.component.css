@@ -1,0 +1,28 @@
+*{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 0;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    scale: 0.5;
+    height: 100vh;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.active{
+    color: green;
+}
+.not-active{
+    color: blue;
+}
