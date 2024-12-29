@@ -1,0 +1,112 @@
+[{
+  "_id": {
+    "$oid": "676a8112b11541610f19c3b3"
+  },
+  "name": "Smartphone",
+  "price": 499.99,
+  "description": "A sleek and powerful smartphone with a 48MP camera and 128GB storage.",
+  "imgURL": "https://example.com/images/smartphone.jpg",
+  "createdAt": {
+    "$date": "2024-12-24T09:38:26.279Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-24T09:38:26.279Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "676a8112b11541610f19c3b4"
+  },
+  "name": "Wireless Headphones",
+  "price": 129.99,
+  "description": "Noise-cancelling wireless headphones with 20 hours of battery life.",
+  "imgURL": "https://example.com/images/headphones.jpg",
+  "createdAt": {
+    "$date": "2024-12-24T09:38:26.279Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-24T09:38:26.279Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "676a8112b11541610f19c3b2"
+  },
+  "name": "Laptop",
+  "price": 899.99,
+  "description": "A high-performance laptop with 16GB RAM and 512GB SSD.",
+  "imgURL": "https://example.com/images/laptop.jpg",
+  "createdAt": {
+    "$date": "2024-12-24T09:38:26.279Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-24T09:38:26.279Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "676a8112b11541610f19c3b5"
+  },
+  "name": "Smartwatch",
+  "price": 199.99,
+  "description": "A stylish smartwatch with fitness tracking and heart-rate monitoring features.",
+  "imgURL": "https://example.com/images/smartwatch.jpg",
+  "createdAt": {
+    "$date": "2024-12-24T09:38:26.279Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-24T09:38:26.279Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "676a8112b11541610f19c3b6"
+  },
+  "name": "Bluetooth Speaker",
+  "price": 79.99,
+  "description": "Portable Bluetooth speaker with excellent sound quality and 12-hour battery life.",
+  "imgURL": "https://example.com/images/speaker.jpg",
+  "createdAt": {
+    "$date": "2024-12-24T09:38:26.279Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-24T09:38:26.279Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67711f2c0ac6d38c086b0c63"
+  },
+  "name": "product 1",
+  "price": 1500,
+  "description": "this is a description",
+  "imgURL": "1735466796743_wallpaperflare.com_wallpaper.jpg",
+  "createdAt": {
+    "$date": "2024-12-29T10:06:36.756Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-29T10:06:36.756Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67711f3b0da1d3eb82065f72"
+  },
+  "name": "product 1",
+  "price": 1500,
+  "description": "this is a description",
+  "imgURL": "1735466811133_wallpaperflare.com_wallpaper.jpg",
+  "createdAt": {
+    "$date": "2024-12-29T10:06:51.146Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-29T10:06:51.146Z"
+  },
+  "__v": 0
+}]
