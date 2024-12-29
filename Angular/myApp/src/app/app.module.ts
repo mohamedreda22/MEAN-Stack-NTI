@@ -7,6 +7,8 @@ import { FirstComponent } from './first/first.component';
 import { FormsModule } from '@angular/forms';
 import { ProductsComponent } from './products/products.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { NoSpacePipe } from './customPipes/noSpace.pipe';
+
 
 
 @NgModule({
@@ -14,12 +16,13 @@ import { PipesComponent } from './pipes/pipes.component';
     AppComponent,
     FirstComponent,
     ProductsComponent,
-    PipesComponent
+    PipesComponent,
+    NoSpacePipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule // Add this line to import FormsModule for Two-Way Binding
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

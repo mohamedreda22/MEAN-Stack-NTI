@@ -18,5 +18,13 @@ export class PipesComponent {
   }
 
   grade=22/150
+  price= 12.34657475547
+
+  asyncData = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Async data')
+    }, 2000)
+  })
+
 
 }
