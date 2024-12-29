@@ -8,7 +8,7 @@ const port = 3000;
 const cors = require('cors');
 //test
 connectDB(); // connect to database
-app.use(cors(
+app.use(cors(// allow requests from all domains and localhost:4200 (Angular app)    
     {
         origin: 'http://localhost:4200'
     }
@@ -17,6 +17,7 @@ app.use(express.json()); // for parsing application/json
 app.use('/users', userRouter); 
 app.use('/userTypes', userTypeRouter);
 app.use('/products', productRouter);
+app.use('/images', express.static('imgs')); // serve images from imgs folder in the root directory
 
 
 
