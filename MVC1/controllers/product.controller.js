@@ -2,6 +2,7 @@ const productModel = require('../models/product.model');
 
 exports.createProduct = async (req, res) => {
     try {
+        req.body.imgURL =req.file.filename; // add the file name to the body object before creating the product in the database
         const product = await productModel.create(req.body);
         res.status(201).send(product);
     } catch (error) {
