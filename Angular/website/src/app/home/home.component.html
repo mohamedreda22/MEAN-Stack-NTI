@@ -1,26 +1,36 @@
-<div class="container"><div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<div
+  id="carouselExampleControls"
+  class="carousel slide"
+  data-bs-ride="carousel"
+  style="transform: scale(0.9); transform-origin: center"
+>
+  <div class="carousel-inner">
+    <div
+      class="carousel-item"
+      *ngFor="let product of products; let i = index"
+      [class.active]="i === 0"
+    >
+      <img
+        class="d-block w-100"
+        [src]="imageURL + product.imgURL"
+        alt="Slide {{ i + 1 }}"
+      />
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-80" src="https://plus.unsplash.com/premium_photo-1673306778968-5aab577a7365?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmFja2dyb3VuZCUyMGltYWdlfGVufDB8fDB8fHww" alt="First slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-80" src="https://images.unsplash.com/photo-1649336321305-3fe272852c94?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFja2dyb3VuZCUyMGltYWdlfGVufDB8fDB8fHww" alt="Second slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-80" src="https://plus.unsplash.com/premium_photo-1673697240011-76f7f9220300?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFja2dyb3VuZCUyMGltYWdlfGVufDB8fDB8fHww" alt="Third slide">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div></div>
+  </div>
+  <a
+    class="carousel-control-prev"
+    href="#carouselExampleControls"
+    role="button"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </a>
+  <a
+    class="carousel-control-next"
+    href="#carouselExampleControls"
+    role="button"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </a>
+</div>
