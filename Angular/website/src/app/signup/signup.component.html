@@ -11,59 +11,70 @@
         <h2>Join US</h2>
         <!-- Text Input -->
         <div class="form-group">
-          <label for="text">Username</label>
-          <input type="text" placeholder="Username" name="username"  ngModel required> <!-- ngModel is a directive that binds the input value to the component class property. -->
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Username" name="username" ngModel required #username="ngModel"> <!-- ngModel is a directive that binds the input value to the component class property. -->
+         <div class="msg-error" *ngIf= "username.invalid && username.touched">
+            *Username is required
+          </div>    
         </div>
-        <div class="form-row">
 
+        <div class="form-row">
         <!-- Password Input -->
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" placeholder="Enter password" name="password" ngModel required>
+          <input type="password" id="password" placeholder="Enter password" name="password" ngModel required>
         </div>
   
         <!-- Re-type Password Input -->
         <div class="form-group">
-          <label for="password">Re-type Password</label>
-          <input type="password" placeholder="Re-type Password" name="retypePassword" ngModel required>
+          <label for="retypePassword">Re-type Password</label>
+          <input type="password" id="retypePassword" placeholder="Re-type Password" name="retypePassword" ngModel required>
         </div>
         </div>
 
         <!-- Email Input -->
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" placeholder="Enter email" name="email" ngModel required>
+          <input type="email" id="email" placeholder="Enter email" name="email" ngModel required #email="ngModel" email>
+            <div class="msg-error" *ngIf= "email.invalid && email.touched">
+                <p *ngIf= "email.errors?.['required']">*email is required</p>
+                <p *ngIf= "email.errors?.['email']">*wrong email format</p>
+                </div>
         </div>
         <div class="form-row">
 
         <!-- Number Input -->
         <div class="form-group">
-          <label for="number">Age</label>
-          <input type="number" placeholder="Age" name="age" ngModel required>
+          <label for="age">Age</label>
+          <input type="number" id="age" placeholder="Age" name="age" ngModel required>
         </div>
         
         <!-- Date Input -->
         <div class="form-group">
-          <label for="date">Birth Date</label>
-          <input type="date" name="birthDate" ngModel required>
+          <label for="birthDate">Birth Date</label>
+          <input type="date" id="birthDate" name="birthDate" ngModel required>
         </div>
         </div>
         <!-- URL Input -->
         <div class="form-group">
-          <label for="url">LinkedIn URL</label>
-          <input type="url" placeholder="LinkedIn URL" name="linkedInURL" ngModel>
+          <label for="linkedInURL">LinkedIn URL</label>
+          <input type="url" id="linkedInURL" placeholder="LinkedIn URL" name="linkedInURL" ngModel>
         </div>
         
         <!-- Telephone Input -->
         <div class="form-group">
-          <label for="tel">Phone NO.</label>
-          <input type="tel" placeholder="Phone NO." name="phone" ngModel required>
+          <label for="phone">Phone NO.</label>
+          <input type="tel" id="phone" placeholder="Phone NO." name="phone" ngModel required #phone="ngModel" pattern="^[0-9]{11}$">
+            <div class="msg-error" *ngIf= "phone.invalid && phone.touched">
+                <p *ngIf= "phone.errors?.['required']">*phone is required</p>
+                <p *ngIf= "phone.errors?.['pattern']">*wrong phone format, should be 11 digits</p>
+                </div>
         </div>
         
         <!-- File Input -->
         <div class="form-group">
-          <label for="file">Your C.V</label>
-          <input type="file" name="cv" ngModel>
+          <label for="cv">Your C.V</label>
+          <input type="file" id="cv" name="cv" ngModel>
         </div>
         
         <!-- Radio Buttons -->
@@ -90,8 +101,8 @@
         
         <!-- Textarea -->
         <div class="form-group">
-          <label for="textarea">About you</label>
-          <textarea id="textarea" name="about" rows="4" placeholder="About You" ngModel></textarea>
+          <label for="about">About you</label>
+          <textarea id="about" name="about" rows="4" placeholder="About You" ngModel></textarea>
         </div>
   
         <!-- Checkbox -->

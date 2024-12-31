@@ -98,3 +98,12 @@
     display: flex;
     justify-content: space-between;
   } 
+
+  .msg-error {
+    color: red;
+    font-size: 14px;
+  }
+
+  input.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }

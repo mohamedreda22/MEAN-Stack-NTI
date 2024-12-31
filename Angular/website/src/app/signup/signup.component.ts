@@ -13,7 +13,7 @@ export class SignupComponent {
   constructor() { }
 
   onSubmit(form: NgForm) {
-    console.log("My form data", form.value);
+    console.log("My form data", form);
   }
 
 }
