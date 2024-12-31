@@ -1,0 +1,110 @@
+<div class="body">
+    <div class="form-container">
+        <!-- signupForm refrance name-->
+        <!-- ngSubmit is a directive that binds the form submission to the onSubmit() method. -->
+        <!-- #signupForm="ngForm" is a local variable that we can use to access the form in the component class. -->
+        <!-- onSubmit(signupForm) is a method that will be called when the form is submitted. -->
+        <!-- The method takes the form as an argument. -->
+        <!-- The form is passed to the method so that we can access the form data in the component class. -->
+        <!-- The method will be implemented in the component class. -->
+      <form (ngSubmit)="onSubmit(signupForm)" #signupForm="ngForm"> 
+        <h2>Join US</h2>
+        <!-- Text Input -->
+        <div class="form-group">
+          <label for="text">Username</label>
+          <input type="text" placeholder="Username" name="username"  ngModel required> <!-- ngModel is a directive that binds the input value to the component class property. -->
+        </div>
+        <div class="form-row">
+
+        <!-- Password Input -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" placeholder="Enter password" name="password" ngModel required>
+        </div>
+  
+        <!-- Re-type Password Input -->
+        <div class="form-group">
+          <label for="password">Re-type Password</label>
+          <input type="password" placeholder="Re-type Password" name="retypePassword" ngModel required>
+        </div>
+        </div>
+
+        <!-- Email Input -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" placeholder="Enter email" name="email" ngModel required>
+        </div>
+        <div class="form-row">
+
+        <!-- Number Input -->
+        <div class="form-group">
+          <label for="number">Age</label>
+          <input type="number" placeholder="Age" name="age" ngModel required>
+        </div>
+        
+        <!-- Date Input -->
+        <div class="form-group">
+          <label for="date">Birth Date</label>
+          <input type="date" name="birthDate" ngModel required>
+        </div>
+        </div>
+        <!-- URL Input -->
+        <div class="form-group">
+          <label for="url">LinkedIn URL</label>
+          <input type="url" placeholder="LinkedIn URL" name="linkedInURL" ngModel>
+        </div>
+        
+        <!-- Telephone Input -->
+        <div class="form-group">
+          <label for="tel">Phone NO.</label>
+          <input type="tel" placeholder="Phone NO." name="phone" ngModel required>
+        </div>
+        
+        <!-- File Input -->
+        <div class="form-group">
+          <label for="file">Your C.V</label>
+          <input type="file" name="cv" ngModel>
+        </div>
+        
+        <!-- Radio Buttons -->
+        <div class="form-group">
+          <label>Gender</label>
+          <div class="form-group-inline">
+            <input type="radio" id="radio1" name="gender" value="female" ngModel required> 
+            <label for="radio1">Female</label>
+          </div>
+          <div class="form-group-inline">
+            <input type="radio" id="radio2" name="gender" value="male" ngModel required> 
+            <label for="radio2">Male</label>
+          </div>
+        </div>
+        
+        <!-- Select Dropdown -->
+        <div class="form-group">
+          <label for="select">Status</label>
+          <select id="select" name="status" ngModel required>
+            <option value="graduate">Graduate</option>
+            <option value="student">Student</option>
+          </select>
+        </div>
+        
+        <!-- Textarea -->
+        <div class="form-group">
+          <label for="textarea">About you</label>
+          <textarea id="textarea" name="about" rows="4" placeholder="About You" ngModel></textarea>
+        </div>
+  
+        <!-- Checkbox -->
+        <div class="form-group-inline">
+          <input type="checkbox" id="terms" name="terms" ngModel required>
+          <label for="terms">Agree to terms and conditions</label>
+        </div>
+        
+        <!-- Submit Button -->
+        <div class="form-group text-center">
+          <input type="submit" value="Join Us"/>
+        </div>
+      </form>
+    </div>
+  </div>
+  
