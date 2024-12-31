@@ -15,6 +15,22 @@ const productSchema = new mongoose.Schema({
     imgURL: {
         type: String,
         required: true
+    },
+    category: {
+        type: String,
+        required: true
+    },
+    subCategory: {
+        type: String,
+        required: true
+    },
+    bestSellers: {
+        type: Boolean,
+        required: true
+    },
+    rank: {
+        type: Number,
+        required: true
     }
 }, {
     timestamps: true
