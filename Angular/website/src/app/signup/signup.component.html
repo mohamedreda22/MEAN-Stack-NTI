@@ -16,19 +16,27 @@
          <div class="msg-error" *ngIf= "username.invalid && username.touched">
             *Username is required
           </div>    
+          <button (click)= "onRandomUsername(signupForm)" type="button">generate username</button>
         </div>
 
         <div class="form-row">
         <!-- Password Input -->
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter password" name="password" ngModel required>
-        </div>
+          <input type="password" id="password" placeholder="Enter password" name="password" ngModel required #password="ngModel">
+          <div class="msg-error" *ngIf= "password.invalid && password.touched">
+            <p *ngIf= "password.errors?.['required']">*password is required</p>
+        </div></div>    
   
         <!-- Re-type Password Input -->
         <div class="form-group">
           <label for="retypePassword">Re-type Password</label>
-          <input type="password" id="retypePassword" placeholder="Re-type Password" name="retypePassword" ngModel required>
+          <input type="password" id="retypePassword" placeholder="Re-type Password" name="retypePassword" ngModel required #retypePassword="ngModel" [pattern]= "password.value">
+            <div class="msg-error" *ngIf= "retypePassword.invalid && retypePassword.touched">
+                <p *ngIf= "retypePassword.errors?.['required']">*retype password is required</p>
+                <!-- <p *ngIf= "retypePassword.errors?.['notMatch']">*passwords do not match</p> -->
+                 <p *ngIf= "retypePassword.errors?.['pattern']">*passwords do not match</p>
+                </div>
         </div>
         </div>
 
@@ -46,7 +54,11 @@
         <!-- Number Input -->
         <div class="form-group">
           <label for="age">Age</label>
-          <input type="number" id="age" placeholder="Age" name="age" ngModel required>
+          <input type="number" id="age" placeholder="Age" name="age" ngModel required #age="ngModel" min="17">
+          <div class="msg-error" *ngIf= "age.invalid && age.touched">
+            <p *ngIf= "age.errors?.['required']">*age is required</p>
+            <p *ngIf= "age.errors?.['min']">*age should be greater than 17</p>
+            </div>  
         </div>
         
         <!-- Date Input -->
