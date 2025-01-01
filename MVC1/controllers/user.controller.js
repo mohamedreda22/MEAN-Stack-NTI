@@ -1,13 +1,17 @@
 const userModel = require("../models/user.model");
-const { hashPassword, isMatch } = require("../utilis/hasing");
+const { hashPassword, isMatch ,comparePassword} = require("../utilis/hasing");
 const auth = require("../utilis/auth");
 
 exports.createUser = async (req, res) => {
   try {
     // Hash the password before saving it to the database
     req.body.password = await hashPassword(req.body.password);
+    req.body.retypepassword = await hashPassword(req.body.retypepassword);
+    if(comparePassword(req.body.password, req.body.retypepassword))
+    {    
     const user = await userModel.create(req.body);
     res.status(201).send(user);
+  }
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

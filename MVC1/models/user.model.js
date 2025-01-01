@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema(
   {
-    name: {
+    username: {
       type: String,
       required: true,
     },
@@ -15,10 +15,14 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    retypepassword: {
+      type: String,
+      required: true,
+    },
     userType: {
       type: mongoose.Schema.Types.ObjectId, // what type of data we are referencing
       ref: "userType", //name of what we are referencing
-      required: true,
+      default: "676beb8d676057a11051a907",
     },
   },
   {

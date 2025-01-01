@@ -5,6 +5,7 @@ const userRouter = require('./routers/user.router');
 const userTypeRouter = require('./routers/userType.router');
 const productRouter = require('./routers/product.router');
 const categoryRouter = require('./routers/category.router');
+const cartRouter = require('./routers/cart.router');
 const port = 3000;
 const cors = require('cors');
 //test
@@ -19,8 +20,8 @@ app.use('/users', userRouter);
 app.use('/userTypes', userTypeRouter);
 app.use('/products', productRouter);
 app.use("/categories", categoryRouter);
+app.use("/cart", cartRouter);
 app.use('/images', express.static('imgs')); // serve images from imgs folder in the root directory
-
 
 
 
