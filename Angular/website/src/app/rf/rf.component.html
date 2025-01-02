@@ -1,0 +1,51 @@
+<div class="body">
+    <div class="form-container">
+    <!--
+    (ngSubmit) is used to bind the form submission event to the signUp() method of the component class.
+    [formGroup] is used to bind the formGroup directive to the joinUsForm property of the component class.
+    formControlName is used to bind the input fields to the form controls of the joinUsForm form group.
+    -->
+      <form (ngSubmit)="signUp()" [formGroup]="joinUsForm"> 
+        <h2>Join US</h2>
+
+        <!-- Text Input -->
+        <div class="form-group">
+            <label for="text">Username</label>
+            <input type="text" placeholder="Username" formControlName="username" required>
+            <div class="erroe-msg" >
+        <span *ngIf="joinUsForm.get('username')!.hasError('required') && joinUsForm.get('username')!.touched">*Username is required</span>
+        <span *ngIf="joinUsForm.get('username')!.hasError('minlength') && joinUsForm.get('username')!.touched">*Username must be at least 5 characters</span>
+            </div>
+        </div>
+         <!-- Email Input -->
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" placeholder="Enter email" formControlName="email" required email>
+            <div class="erroe-msg" >
+        <span *ngIf="joinUsForm.get('email')!.hasError('required') && joinUsForm.get('email')!.touched">*Email is required</span>
+        <span *ngIf="joinUsForm.get('email')!.hasError('email') && joinUsForm.get('email')!.touched">*Email is invalid</span>
+            </div>
+        </div>
+        
+        <!-- Password Input -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" placeholder="Enter password" formControlName="password" required>
+        </div>
+  
+        <!-- Re-type Password Input -->
+        <div class="form-group">
+          <label for="password">Re-type Password</label>
+          <input type="password" placeholder="Re-type Password" formControlName="confirmPassword" required>
+        </div>
+        
+
+        
+        <!-- Submit Button -->
+        <div class="form-group text-center">
+          <input type="submit" value="Join Us"/>
+        </div>
+      </form>
+    </div>
+  </div>
+  
