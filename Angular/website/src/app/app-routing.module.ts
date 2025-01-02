@@ -5,6 +5,8 @@ import { LoginComponent } from './login/login.component';
 import { ProductListComponent } from './productsList/product-list/product-list.component';
 import { SignupComponent } from './signup/signup.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { authGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -26,6 +28,12 @@ const routes: Routes = [
   {
     path: 'signup',
     component: SignupComponent
+  },
+  {
+    // we use the canActivate property to protect the dashboard route from unauthorized access by using the authGuard
+    // we use authGuard to check if the user is authenticated or not and if the user is authenticated then we allow the user to access the dashboard route
+    path: 'dashboard',
+    component:DashboardComponent,canActivate: [authGuard]
   },
   {
     path: '**',
