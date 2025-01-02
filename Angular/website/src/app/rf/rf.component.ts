@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { PasswordValidator } from '../customvalidators/password.validator';
 
 @Component({
   selector: 'app-rf',
@@ -20,9 +21,9 @@ export class RfComponent implements OnInit {
     // Create a FormGroup object and bind it to the form in the template file using the formGroup directive.
     this .joinUsForm = new FormGroup({
       username: new FormControl('',[Validators.required, Validators.minLength(5)]),
-      email: new FormControl(''),
-      password: new FormControl(''),
-      confirmPassword: new FormControl(''),
+      email: new FormControl('',[Validators.required, Validators.email]),
+      password: new FormControl('',[Validators.required, PasswordValidator.passwordStrength()]),
+      confirmPassword: new FormControl('',[Validators.required, PasswordValidator.passwordMatch('password','confirmPassword')]),
   });}
 
   // Create a FormGroup object and bind it to the form in the template file using the formGroup directive.
@@ -31,6 +32,12 @@ export class RfComponent implements OnInit {
   // Create a method to handle the form submission.
   signUp(){
     console.log(this.joinUsForm.value);
+  }
+
+  passwordMismatch(){
+    const password = this.joinUsForm.get('password')?.value;
+    const confirmPassword = this.joinUsForm.get('confirmPassword')?.value;
+    return password !== confirmPassword;
   }
 
 }

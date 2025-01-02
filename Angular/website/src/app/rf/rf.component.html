@@ -12,18 +12,22 @@
         <div class="form-group">
             <label for="text">Username</label>
             <input type="text" placeholder="Username" formControlName="username" required>
-            <div class="erroe-msg" >
-        <span *ngIf="joinUsForm.get('username')!.hasError('required') && joinUsForm.get('username')!.touched">*Username is required</span>
-        <span *ngIf="joinUsForm.get('username')!.hasError('minlength') && joinUsForm.get('username')!.touched">*Username must be at least 5 characters</span>
+            <div class="erroe-msg" *ngIf="joinUsForm.get('username')!.touched && joinUsForm.get('username')!.invalid">
+        <!-- <span *ngIf="joinUsForm.get('username')!.hasError('required') && joinUsForm.get('username')!.touched">*Username is required</span> -->
+         <span *ngIf="joinUsForm.get('username')!.errors?.['required']">*Username is required</span>
+         <span *ngIf="joinUsForm.get('username')!.errors?.['minlength']">*Username must be at least 5 characters</span>
+        <!-- <span *ngIf="joinUsForm.get('username')!.hasError('minlength') && joinUsForm.get('username')!.touched">*Username must be at least 5 characters</span> -->
             </div>
         </div>
          <!-- Email Input -->
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" placeholder="Enter email" formControlName="email" required email>
-            <div class="erroe-msg" >
-        <span *ngIf="joinUsForm.get('email')!.hasError('required') && joinUsForm.get('email')!.touched">*Email is required</span>
-        <span *ngIf="joinUsForm.get('email')!.hasError('email') && joinUsForm.get('email')!.touched">*Email is invalid</span>
+            <input type="email" placeholder="Enter email" formControlName="email" required >
+            <div class="erroe-msg" *ngIf="joinUsForm.get('email')!.touched && joinUsForm.get('email')!.invalid"> 
+        <!-- <span *ngIf="joinUsForm.get('email')!.hasError('required') ">*Email is required</span> -->
+         <span *ngIf="joinUsForm.get('email')!.errors?.['required'] ">*Email is required</span>
+         <span *ngIf="joinUsForm.get('email')!.errors?.['email']">*Wrong Email format</span>
+        <!-- <span *ngIf="joinUsForm.get('email')!.hasError('email') ">*Wrong email format</span> -->
             </div>
         </div>
         
@@ -31,15 +35,24 @@
         <div class="form-group">
           <label for="password">Password</label>
           <input type="password" placeholder="Enter password" formControlName="password" required>
+          <div class="erroe-msg" *ngIf="joinUsForm.get('password')!.touched && joinUsForm.get('password')!.invalid">
+         <span *ngIf="joinUsForm.get('password')!.errors?.['required']">*Password is required</span>
+         <span *ngIf="joinUsForm.get('password')!.errors?.['passwordStrength']">*Password must be at least 8 characters</span><br>
+         <span *ngIf="joinUsForm.get('password')!.errors?.['passwordStrength'] && !joinUsForm.get('password')!.errors?.['minlength']">
+            *Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character
+        </span>
+         </div>
         </div>
   
         <!-- Re-type Password Input -->
         <div class="form-group">
           <label for="password">Re-type Password</label>
           <input type="password" placeholder="Re-type Password" formControlName="confirmPassword" required>
+            <div class="erroe-msg" *ngIf="joinUsForm.get('confirmPassword')!.touched && joinUsForm.get('confirmPassword')!.invalid">
+                <span *ngIf="joinUsForm.get('confirmPassword')!.errors?.['required']">*Password is required</span>
+                <span *ngIf="joinUsForm.get('confirmPassword')!.errors?.['passwordMismatch']">*Passwords do not match</span>
+                </div>
         </div>
-        
-
         
         <!-- Submit Button -->
         <div class="form-group text-center">
