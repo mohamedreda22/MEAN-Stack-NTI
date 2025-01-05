@@ -46,17 +46,22 @@
         <label for="password">Re-type Password</label>
         <input type="password" placeholder="Re-type Password" formControlName="retypepassword" required>
         <div class="error-msg" *ngIf= "joinUsForm.get('retypepassword')!.touched && joinUsForm.get('retypepassword')!.invalid">
-          <span *ngIf="joinUsForm.get('retypepassword')!.errors?.['required']">*Password is required</span>
-          <span *ngIf="joinUsForm.get('retypepassword')!.errors?.['passwordDismatch']">*Passwords do not match</span>
+          <span *ngIf= "joinUsForm.get('retypepassword')!.errors?.['required']">*Password is required</span>
+          <span *ngIf= "joinUsForm.get('retypepassword')!.errors?.['passwordDismatch']">*Passwords do not match</span>
         </div>
       </div>
+
+      <!-- language Input -->
+      <div class="form-group" formArrayName="languages">
+        <label for="language">Language</label>
+        <input type="text" *ngFor= "let lang of languages.controls let i = index" [formControlName]= "i">
+        <button type="button" (click)= "addNewLanguage()">Add Language</button>
+        </div>
     
       <!-- Submit Button -->
       <div class="form-group text-center">
         <input type="submit" value="Join Us"/>
       </div>
     </form>
-    
     </div>
   </div>
-  

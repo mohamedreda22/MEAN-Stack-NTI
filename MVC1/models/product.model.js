@@ -18,19 +18,19 @@ const productSchema = new mongoose.Schema({
     },
     category: {
         type: String,
-        required: true
+        // required: true
     },
     subCategory: {
         type: String,
-        required: true
+        // required: true
     },
     bestSellers: {
         type: Boolean,
-        required: true
+        // required: true
     },
     rank: {
         type: Number,
-        required: true
+        // required: true
     }
 }, {
     timestamps: true

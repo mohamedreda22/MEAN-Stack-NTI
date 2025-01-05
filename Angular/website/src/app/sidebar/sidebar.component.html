@@ -1,6 +1,9 @@
 <div>
     <a routerLink="home" routerLinkActive="active">Home</a>
     <a routerLink="product" routerLinkActive="active">Product List</a>
+    <a routerLink="addProduct" routerLinkActive="active">Add Product</a>
+    <a routerLink="addusertype" routerLinkActive="active">Add userType</a>
+    <a routerLink="rf" routerLinkActive="active">RF</a>
     <a routerLink="login" routerLinkActive="active" *ngIf="!isLoggedIn"> Login</a>
     <a routerLink="signup" routerLinkActive="active" *ngIf="!isLoggedIn"> Sign Up</a>
     <a routerLink="logout" routerLinkActive="active" *ngIf="isLoggedIn" (click)="logout()"> Logout</a>

@@ -16,6 +16,7 @@ import { SignupComponent } from './signup/signup.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { RfComponent } from './rf/rf.component';
 import { AddusertypeComponent } from './addusertype/addusertype.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AddusertypeComponent } from './addusertype/addusertype.component';
     SignupComponent,
     NotfoundComponent,
     RfComponent,
-    AddusertypeComponent
+    AddusertypeComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,

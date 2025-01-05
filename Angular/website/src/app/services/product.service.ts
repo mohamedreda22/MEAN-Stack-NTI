@@ -14,4 +14,8 @@ export class ProductService {
     // this is the method that will be called in the component to get the data from the server
     return this._http.get<any>('http://localhost:3000/products'); // this is the url of the server where the data is stored
   }
+
+  addProduct(product: FormData): Observable<any> {
+    return this._http.post<any>('http://localhost:3000/products', product);
+  }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { PasswordValidator } from '../customvalidators/password.validator';
 import { AuthService } from '../services/auth.service';
 
@@ -24,10 +24,22 @@ export class RfComponent implements OnInit {
         PasswordValidator.passwordStrength(),
       ]),
       retypepassword: new FormControl('', [Validators.required]),
+      languages: new FormArray([
+        new FormControl('')
+      ]),
       // userType: new FormControl('676a9cdbd3eb32316fbc03b6'),
     }, {
       validators: PasswordValidator.passwordMatch('password', 'retypepassword'),
     });
+  }
+
+  get languages(): FormArray{
+    return this.joinUsForm.get('languages') as FormArray;
+  }
+
+  addNewLanguage() {
+    let myArray = this.joinUsForm.get('languages') as FormArray;
+    myArray.push(new FormControl(''));
   }
 
 /*   signUp() {

@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { authGuard } from './guards/auth.guard';
 import { RfComponent } from './rf/rf.component';
 import { AddusertypeComponent } from './addusertype/addusertype.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 const routes: Routes = [
   {
@@ -43,6 +44,10 @@ const routes: Routes = [
   {
     path: 'addusertype',
     component: AddusertypeComponent
+  },
+  {
+    path:'addProduct',
+    component: AddProductComponent
   },
   {
     path: '**',
