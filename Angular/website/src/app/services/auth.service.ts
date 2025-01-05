@@ -38,6 +38,10 @@ export class AuthService {
     );
   }
 
+  register(registerData:any): Observable<any> {
+    return this._http.post<any>('http://localhost:3000/users', registerData);
+  }
+
   // getAccessToken() method is used to get the tokenSubject as an observable so that the component can subscribe to it and get the token
   getAccessToken() :Observable<string | null> {
     return this.tokenSubject.asObservable(); // returning the tokenSubject as an observable so that the component can subscribe to it and get the token

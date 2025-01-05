@@ -100,6 +100,16 @@
     font-size: 14px;
   }
 
-  input.ng-touched.ng-invalid{
-    border: 1px solid red;
+  input.ng-touched.ng-invalid {
+      border: 1px solid red;
+  }
+
+  input[type="submit"] {
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
   }

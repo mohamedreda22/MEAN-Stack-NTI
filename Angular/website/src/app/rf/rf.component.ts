@@ -1,43 +1,62 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PasswordValidator } from '../customvalidators/password.validator';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-rf',
   standalone: false,
-  
   templateUrl: './rf.component.html',
-  styleUrl: './rf.component.css'
+  styleUrls: ['./rf.component.css']
 })
 export class RfComponent implements OnInit {
 
-  constructor() { 
-    // the code in the constructor is executed when the component is created. 
-  }
+  constructor(private _authS:AuthService) { }
 
+  joinUsForm!: FormGroup;
 
   ngOnInit(): void {
-    //get data from service and bind to form control 
-    // Create a FormGroup object and bind it to the form in the template file using the formGroup directive.
-    this .joinUsForm = new FormGroup({
-      username: new FormControl('',[Validators.required, Validators.minLength(5)]),
-      email: new FormControl('',[Validators.required, Validators.email]),
-      password: new FormControl('',[Validators.required, PasswordValidator.passwordStrength()]),
-      confirmPassword: new FormControl('',[Validators.required, PasswordValidator.passwordMatch('password','confirmPassword')]),
-  });}
-
-  // Create a FormGroup object and bind it to the form in the template file using the formGroup directive.
-  joinUsForm! :FormGroup ;
-
-  // Create a method to handle the form submission.
-  signUp(){
-    console.log(this.joinUsForm.value);
+    this.joinUsForm = new FormGroup({
+      username: new FormControl('', [Validators.required, Validators.minLength(5)]),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [
+        Validators.required,
+        PasswordValidator.passwordStrength(),
+      ]),
+      retypepassword: new FormControl('', [Validators.required]),
+      // userType: new FormControl('676a9cdbd3eb32316fbc03b6'),
+    }, {
+      validators: PasswordValidator.passwordMatch('password', 'retypepassword'),
+    });
   }
 
-  passwordMismatch(){
+/*   signUp() {
+    this._authS.register(this.joinUsForm.value).subscribe({
+      next: (data) => {
+        console.log("Data: ", data);
+      },
+      error: (err) => {
+        console.error("Error: ", err);
+      }
+    });
+  } */
+
+  signUp() {
+    if(this.joinUsForm.valid){
+      console.log("Form: ", this.joinUsForm.value);
+      this._authS.register(this.joinUsForm.value).subscribe({
+        next: (data) => {
+          console.log("Data: ", data);
+        },
+        error: (err) => {
+          console.error("Error: ", err);
+        }
+      });}}
+
+
+  passwordDismatch(){
     const password = this.joinUsForm.get('password')?.value;
-    const confirmPassword = this.joinUsForm.get('confirmPassword')?.value;
+    const confirmPassword = this.joinUsForm.get('retypepassword')?.value;
     return password !== confirmPassword;
   }
-
 }

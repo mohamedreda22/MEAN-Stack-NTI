@@ -23,17 +23,19 @@ import { AbstractControl, ValidationErrors, ValidatorFn } from "@angular/forms";
         }
     }
 
-    static passwordMatch(controlName:string, matchingControlName:string){
-        return (formGroup:AbstractControl):ValidationErrors | null =>{
-            const control = formGroup.get(controlName);
-            const matchingControl = formGroup.get(matchingControlName);
-            if(control?.value !== matchingControl?.value){
-                matchingControl?.setErrors({passwordMatch:true});
-            }else{
-                matchingControl?.setErrors(null);
-            }
-            return null;
-        }
-
-    }
+    static passwordMatch(controlName: string, matchingControlName: string) {
+        return (formGroup: AbstractControl): ValidationErrors | null => {
+          const control = formGroup.get(controlName);
+          const matchingControl = formGroup.get(matchingControlName);
+      
+          // If both controls exist and their values do not match
+          if (control?.value !== matchingControl?.value) {
+            matchingControl?.setErrors({ passwordDismatch: true });
+          } else {
+            matchingControl?.setErrors(null); // clear errors if they match
+          }
+          return null;
+        };
+      }
+      
     }

@@ -1,0 +1,21 @@
+<form (ngSubmit)="addNewType()" [formGroup]= "userTypesForm" >
+    <h2>Add User Type</h2>
+    <div class="form-group">
+        <label for="text">UserType Name</label>
+        <input type="text" placeholder="User Type" formControlName="name" required>
+        <div class="error-msg" *ngIf="userTypesForm.get('name')!.touched && userTypesForm.get('name')!.invalid">
+        <span *ngIf="userTypesForm.get('name')!.errors?.['required']">*User Type is required</span>
+        <span *ngIf="userTypesForm.get('name')!.errors?.['minlength']">*User Type must be at least 5 characters</span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="text">Description</label>
+        <input type="text" placeholder="Description" formControlName="desc" required>
+        <div class="error-msg" *ngIf="userTypesForm.get('desc')!.touched && userTypesForm.get('desc')!.invalid">
+        <span *ngIf="userTypesForm.get('desc')!.errors?.['required']">*Description is required</span>
+        </div>
+    </div>
+    <div class="form-group text-center">
+        <input type="submit" value="Add User Type"/>
+    </div>
+</form>

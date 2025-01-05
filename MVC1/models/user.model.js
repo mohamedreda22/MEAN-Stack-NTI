@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema(
     userType: {
       type: mongoose.Schema.Types.ObjectId, // what type of data we are referencing
       ref: "userType", //name of what we are referencing
-      default: "676beb8d676057a11051a907",
+      default: "676a9cdbd3eb32316fbc03b6",
     },
   },
   {
