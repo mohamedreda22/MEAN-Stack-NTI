@@ -1,0 +1,29 @@
+<!-- <ul>
+    <li *ngFor="let name of names; let i = index">{{ i + 1 }} - {{ name }}</li>
+</ul> -->
+<!--we can use @for for enhance the performance, in the *ngFor the DOM must rebuild from scratch!,but now it will only chance the changed data only based on the track  -->
+
+<ul>
+@for (name of names; track name) {
+    @if (name !== 'ahmed') {   
+         <li>{{ name }}</li>}
+         @else {
+             <li>Not Allowed</li>
+         }
+}</ul>
+
+@for (char of 'angular'; track $index) {
+    @if($first){
+        <h1>First Char: {{char}}</h1>
+    }
+    @else if ($last) {
+        <h1>Last Char: {{char}}</h1>
+    }
+    @else if ($odd) {
+        <h1>Odd Char: {{char}}</h1>
+    }
+    @else if ($even) {
+        <h1>Even Char: {{char}}</h1>
+    }
+    <ul>{{$index+1}} / {{$count}} - {{char }}</ul>
+}   

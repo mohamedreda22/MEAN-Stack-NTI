@@ -8,28 +8,35 @@ import { MyServiceService } from '../services/my-service.service';
   
   templateUrl: './one.component.html',
   styleUrl: './one.component.css',
-  providers: [MyServiceService]
+  // providers: [MyServiceService]
 })
-export class OneComponent implements AfterViewInit{
+export class OneComponent {
 
   constructor(private _myS:MyServiceService) { 
     console.log('Parent component created!');
   }
-ngAfterViewInit(): void {
+/* ngAfterViewInit(): void {
   this.myChild.msg = 'Hello from parent'; // Accessing the child component properties and methods using the reference variable.
   throw new Error('Method not implemented.');
-}
+} */
 
 
 
-@ViewChild(TwoComponent) myChild!: TwoComponent; // This is the child component reference variable that we will use to access the child component properties and methods.
+// @ViewChild(TwoComponent) myChild!: TwoComponent; // This is the child component reference variable that we will use to access the child component properties and methods.
 
-send() {
+/* send() {
   this.myChild.msg = 'Hello from parent'; // Accessing the child component properties and methods using the reference variable.
   this.myChild.hello(); // Accessing the child component properties and methods using the reference variable.
-}
-alarm() {
-  this.myChild.msg = 'Congrats from parent'; // Accessing the child component properties and methods using the reference variable.
-  this.myChild.Congrats(); // Accessing the child component properties and methods using the reference variable.
+} */
+// alarm() {
+//   this.myChild.msg = 'Congrats from parent'; // Accessing the child component properties and methods using the reference variable.
+//   this.myChild.Congrats(); // Accessing the child component properties and methods using the reference variable.
+// }
+send() {
+  const data= Math.random().toString();
+  this._myS.changeNewMessage(data);
+
+  // this._myS.changeMessage('Hello from parent');
+  // this._myS.changeNewMessage('Hello from parent');
 }
 }

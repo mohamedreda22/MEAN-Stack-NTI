@@ -1,9 +1,10 @@
-import { HttpClient } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
-/* @Injectable({
+@Injectable({
   providedIn: 'root'
-}) */
+})
 export class MyServiceService {
 
   products = [
@@ -19,5 +20,22 @@ export class MyServiceService {
     console.log('Product deleted!',this.products);
   }
 
+  message='';
 
+  newMessage:BehaviorSubject<string> = new BehaviorSubject<string>('');
+
+  changeNewMessage(msg:string){
+    this.newMessage.next(msg);
+  }
+  getNewMessage():Observable<string>{
+    return this.newMessage.asObservable();
+  }
+
+  changeMessage(msg:string){
+    this.message = msg;
+  }
+
+  getMessage(){
+    return this.message;
+  }
 }

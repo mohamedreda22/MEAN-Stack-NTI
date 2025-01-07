@@ -12,6 +12,7 @@ import { ChildComponent } from './parent/child/child.component';
 import { ParentComponent } from './parent/parent.component';
 import { OneComponent } from './one/one.component';
 import { TwoComponent } from './two/two.component';
+import { NewComponent } from './new/new.component';
 
 
 
@@ -26,13 +27,14 @@ import { TwoComponent } from './two/two.component';
     ParentComponent,
     OneComponent,
     TwoComponent,
+    NewComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule 
   ],
-  providers: [ ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
