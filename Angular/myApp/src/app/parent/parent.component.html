@@ -1,0 +1,7 @@
+<div>
+    <h3>
+        Message from Child: {{ msg }}
+    </h3>
+</div>
+<app-child *ngFor="let product of products" [myproduct]= "product" (like)= "getMSG(product.name)" (getData)="getDataFn()"></app-child>
+<button (click)="change()">change Product</button>

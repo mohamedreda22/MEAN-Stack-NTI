@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2>Child Component</h2>
+      <p>Product Name: {{ myproduct.name }}</p>
+      <p>Product Price: {{ myproduct.price }}</p>
+        <p>Product Description: {{ myproduct.desc }}</p>
+        <img [src]="myproduct.imageURL" alt="{{ myproduct.name }}" class="img-fluid">
+        <button (click)="doLike()">Like</button>
+        <button (click)="delete()">delete</button>
+    </div>
+  </div>

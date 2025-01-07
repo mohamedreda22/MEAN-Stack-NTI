@@ -8,6 +8,10 @@ import { FormsModule } from '@angular/forms';
 import { ProductsComponent } from './products/products.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { NoSpacePipe } from './customPipes/noSpace.pipe';
+import { ChildComponent } from './parent/child/child.component';
+import { ParentComponent } from './parent/parent.component';
+import { OneComponent } from './one/one.component';
+import { TwoComponent } from './two/two.component';
 
 
 
@@ -18,13 +22,17 @@ import { NoSpacePipe } from './customPipes/noSpace.pipe';
     ProductsComponent,
     PipesComponent,
     NoSpacePipe,
+    ChildComponent,
+    ParentComponent,
+    OneComponent,
+    TwoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule 
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
